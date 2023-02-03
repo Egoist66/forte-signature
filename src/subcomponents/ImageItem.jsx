@@ -1,0 +1,26 @@
+function ImageItems({element}){
+
+    const {items, onValueChange} = element;
+    let elems = [];
+
+    elems = items.map((item, i) => {
+        return (
+            
+            <div key={i} className="items-wrap">
+
+                <label htmlFor={item}>{item}:</label>
+                <input onChange={onValueChange} name={`BannerItem_${i}`} placeholder={`Pass the ${item.toLowerCase()}`} type="url" id={item} className="general-input "/>
+            
+            
+            </div>
+        
+           
+        )
+    });
+
+    elems.join("");
+
+    return elems;
+}
+
+export default ImageItems;
