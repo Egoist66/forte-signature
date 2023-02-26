@@ -8,26 +8,23 @@ import Image from "../subcomponents/Image";
 
 
 
-
-
 class App extends Component {
-    constructor(props) {
-     super(props);
-     
-        this.state = {
-            Name: "",
-            LastName: "",
-            defaultTab: "#item-0",
-            Title: "",
-            Phone: "",
-            BannerItem_0: "",
-            BannerItem_1: "",
-            content: <Info  onValueChanged={(e) => {this.onValueChanged(e)}} inputs={["Name", "LastName", "Title", "Phone"]} />
 
-          
-        }
-      
+    state = {
+        
+        Name: "",
+        LastName: "",
+        defaultTab: "#item-0",
+        Title: "",
+        Phone: "",
+        BannerItem_0: "",
+        BannerItem_1: "",
+        content: <Info  onValueChanged={(e) => {this.onValueChanged(e)}} inputs={["Name", "LastName", "Title", "Phone"]} />
+
+        
     }
+    
+
 
     tab = () => {
         const {defaultTab} = this.state;

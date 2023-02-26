@@ -1,3 +1,5 @@
+import uuid from "react-uuid";
+
 function ImageItems({element}){
 
     const {items, onValueChange} = element;
@@ -6,7 +8,7 @@ function ImageItems({element}){
     elems = items.map((item, i) => {
         return (
             
-            <div key={i} className="items-wrap">
+            <div key={uuid()} className="items-wrap">
 
                 <label htmlFor={item}>{item}:</label>
                 <input onChange={onValueChange} name={`BannerItem_${i}`} placeholder={`Pass the ${item.toLowerCase()}`} type="url" id={item} className="general-input "/>

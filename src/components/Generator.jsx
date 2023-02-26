@@ -1,10 +1,7 @@
 import { Component } from "react";
 
 class Generator extends Component {
-    constructor(props){
-        super(props)
-    }
-
+  
 
     render(){
 

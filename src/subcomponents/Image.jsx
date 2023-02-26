@@ -2,8 +2,7 @@ import ImageItems from "./ImageItem";
 function Image({element}){
     
     return (
-
-        
+   
         <div className="banner-wrap">
 
           <ImageItems element={element} />

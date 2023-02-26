@@ -1,15 +1,8 @@
 import { Component } from "react";
 
 class ControlElements extends Component {
-    constructor(props) {
-        super(props)
-
-
-      
-    }
-
-  
    
+  
     render(){
         const {names} = this.props;
   

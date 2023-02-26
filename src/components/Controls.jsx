@@ -3,14 +3,8 @@ import { Component } from "react";
 import Generator from "./Generator";
 
 class Controls extends Component {
-    constructor(props) {
-        super(props)
-    
-     
-      
-    }
-
    
+
     render(){
       
         const {content, showChilds} = this.props;
@@ -27,7 +21,6 @@ class Controls extends Component {
 
                
                
-
                 <Generator component={content} />
             </section>
         );

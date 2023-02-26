@@ -4,7 +4,7 @@ import ButtonCopy from "./Button";
 
 
 
-const banner = "https://fortegrp.com/wp-content/uploads/2023/01/sig_banner1.png";
+//banner - "https://fortegrp.com/wp-content/uploads/2023/01/sig_banner1.png";
 
 
 function Widget({forteLogoSvg, data, defaultStyle}){
@@ -28,9 +28,9 @@ function Widget({forteLogoSvg, data, defaultStyle}){
                                 <div className="logo-thumbnail"><img className="thumbnail" src={forteLogoSvg} alt=""/></div>
                                 <ul className="social">
 
-                                    <li><a target="_blank" href="https://www.linkedin.com/company/1069110/admin/"/><img src="https://fortegrp.com/wp-content/uploads/2023/01/in2.png" alt="" /></li>
-                                    <li id="middle-social"><a target="_blank" href="https://www.facebook.com/fortegroupinc"/><img src="https://fortegrp.com/wp-content/uploads/2023/01/face2.png" alt="" /></li>
-                                    <li><a target="_blank" href="https://twitter.com/ForteGrp"/><img src="https://fortegrp.com/wp-content/uploads/2023/01/twitter2.png" alt="" /></li>
+                                    <li><a target="_blank" rel="norefferer" href="https://www.linkedin.com/company/1069110/admin/"/><img src="https://fortegrp.com/wp-content/uploads/2023/01/in2.png" alt="" /></li>
+                                    <li id="middle-social"><a rel="norefferer" target="_blank" href="https://www.facebook.com/fortegroupinc"/><img src="https://fortegrp.com/wp-content/uploads/2023/01/face2.png" alt="" /></li>
+                                    <li><a rel="norefferer" target="_blank" href="https://twitter.com/ForteGrp"/><img src="https://fortegrp.com/wp-content/uploads/2023/01/twitter2.png" alt="" /></li>
 
                                 </ul>
                             </td>
@@ -60,9 +60,9 @@ function Widget({forteLogoSvg, data, defaultStyle}){
                                         </li>
 
                                         <ul className="forte-links clearfix">
-                                            <li><a target="_blank" href="https://fortegrp.com/">About Us</a></li>
-                                            <li className="middle-link"><a target="_blank" href="https://fortegrp.com/our-expertise/">Expertise</a></li>
-                                            <li><a target="_blank" href="https://fortegrp.com/contact-us/">Contact Us</a></li>
+                                            <li><a rel="norefferer" target="_blank" href="https://fortegrp.com/">About Us</a></li>
+                                            <li className="middle-link"><a rel="norefferer" target="_blank" href="https://fortegrp.com/our-expertise/">Expertise</a></li>
+                                            <li><a rel="norefferer"  target="_blank" href="https://fortegrp.com/contact-us/">Contact Us</a></li>
                                         </ul>
                                       
                                     </ul>
