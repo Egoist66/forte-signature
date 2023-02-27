@@ -32,16 +32,16 @@ function WidgetTable({forteLogoSvg, data, defaultStyle}){
                                 <span style={{fontFamily: "Arial"}} id="lastname">{LastName}</span>
                             </h3>
 
-                            <ul style={{marginLeft: "0px !important"}} className="person-details">
+                            <ul style={{marginLeft: "0px"}} className="person-details">
 
                                 <style>{defaultStyle}</style>
-                                <li style={{marginLeft: "0px !important"}} className="company-department">
+                                <li style={{marginLeft: "0px"}} className="company-department">
                                     <span  style={{fontFamily: "Arial"}} id="address">{Title}</span>
                                 
                                 </li>
                             
                         
-                                <li style={{marginLeft: "0px !important"}} className="company-phone">
+                                <li style={{marginLeft: "0px"}} className="company-phone">
                                     <img className="info-cred" src="https://fortegrp.com/wp-content/uploads/2023/01/phone.png" alt="" /> <span  style={{fontFamily: "Arial"}}><a id="number"  style={{fontFamily: "Arial", cursor: "pointer", color: "black"}} href={`tel:${Phone}`}>{Phone}</a></span>
                                 
                                 </li>
