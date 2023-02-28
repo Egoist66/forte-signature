@@ -417,7 +417,7 @@ h3 {
 }
 
 .banner {
-    width: 367px;
+    width: 350px;
     height: 100px;
     transition: 0.3s all ease !important;
     box-shadow: 1px 1px 8px -1px silver;
@@ -446,7 +446,7 @@ h3 {
 }
 
 .main-row > td:nth-child(1) {
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 .banner-wrapp {
@@ -528,4 +528,18 @@ h3 {
 .items-wrap {
     display: flex;
     flex-direction: column;
+}
+
+#font-range {
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.font-controls {
+    text-align: center;
+    display: none !important;
+}
+
+#font-out {
+    color: white;
 }

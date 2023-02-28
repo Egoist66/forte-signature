@@ -1,6 +1,16 @@
-function WidgetTable({forteLogoSvg, data, defaultStyle}){
+import PersonDetails from "./PersonDetails";
+
+function WidgetTable({forteLogoSvg, data}){
     
-    const [Name, LastName, Title, Phone, BannerItem_0, BannerItem_1] = data;
+    const [Name, LastName, Title, Phone, BannerItem_0, BannerItem_1, fontValue] = data;
+    const styles = {
+        
+        marginLeft: "0px", 
+        fontFamily: "Arial", 
+        cursor: "pointer", 
+        color: "black", 
+        fontSize: fontValue + "px"
+    }
 
 
     return (
@@ -28,31 +38,11 @@ function WidgetTable({forteLogoSvg, data, defaultStyle}){
 
                             <h3 className="person-name">
 
-                                <span style={{fontFamily: "Arial"}}id="name">{Name} </span>
-                                <span style={{fontFamily: "Arial"}} id="lastname">{LastName}</span>
+                                <span style={{fontFamily: "Arial", fontSize: fontValue + "px"}}id="name">{Name} </span>
+                                <span style={{fontFamily: "Arial", fontSize: fontValue + "px"}} id="lastname">{LastName}</span>
                             </h3>
 
-                            <ul style={{marginLeft: "0px"}} className="person-details">
-
-                                <style>{defaultStyle}</style>
-                                <li style={{marginLeft: "0px"}} className="company-department">
-                                    <span  style={{fontFamily: "Arial"}} id="address">{Title}</span>
-                                
-                                </li>
-                            
-                        
-                                <li style={{marginLeft: "0px"}} className="company-phone">
-                                    <img className="info-cred" src="https://fortegrp.com/wp-content/uploads/2023/01/phone.png" alt="" /> <span  style={{fontFamily: "Arial"}}><a id="number"  style={{fontFamily: "Arial", cursor: "pointer", color: "black"}} href={`tel:${Phone}`}>{Phone}</a></span>
-                                
-                                </li>
-
-                                <ul className="forte-links clearfix">
-                                    <li><a rel="norefferer" target="_blank" href="https://fortegrp.com/">About Us</a></li>
-                                    <li className="middle-link"><a rel="norefferer" target="_blank" href="https://fortegrp.com/our-expertise/">Expertise</a></li>
-                                    <li><a rel="norefferer"  target="_blank" href="https://fortegrp.com/contact-us/">Contact Us</a></li>
-                                </ul>
-                                
-                            </ul>
+                            <PersonDetails mailstyle={".gs li {margin-left: 0px !important}"} style={styles} persondatails={[Title, Phone]}  />
                         
                         </div>
                     

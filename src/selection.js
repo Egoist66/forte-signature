@@ -26,4 +26,15 @@ function ContentSelection(e){
     }
 }
 
-export default ContentSelection;
+function setDefaultTab(defaultTab){
+
+    const click = new MouseEvent("click");
+
+    document.querySelector("#item-0").addEventListener("click", () => {
+        document.location.href = defaultTab;
+    })
+
+    document.querySelector("#item-0").dispatchEvent(click)
+}
+
+export {ContentSelection, setDefaultTab};

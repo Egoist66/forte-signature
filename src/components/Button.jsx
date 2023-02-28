@@ -1,5 +1,5 @@
 import { Component } from "react";
-import ContentSelection from "../selection";
+import {ContentSelection} from "../selection";
 
 class ButtonCopy extends Component {
    

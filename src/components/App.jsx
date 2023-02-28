@@ -1,10 +1,16 @@
 import Controls from "./Controls";
 import Widget from "./Widget";
 import Perks from "./Perks";
-import logo from "../images/logo.png";
+import { setDefaultTab} from "../selection";
 import { Component } from "react";
 import Info from "../subcomponents/Info";
 import Image from "../subcomponents/Image";
+import Settings from "./Settings";
+
+
+import logo from "../images/logo.png";
+
+
 
 
 
@@ -19,7 +25,9 @@ class App extends Component {
         Phone: "",
         BannerItem_0: "",
         BannerItem_1: "",
-        content: <Info  onValueChanged={(e) => {this.onValueChanged(e)}} inputs={["Name", "LastName", "Title", "Phone"]} />
+        content: <Info  onValueChanged={(e) => {this.onValueChanged(e)}} inputs={["Name", "LastName", "Title", "Phone"]} />,
+        fontValue: 14,
+
 
         
     }
@@ -27,14 +35,7 @@ class App extends Component {
 
 
     tab = () => {
-        const {defaultTab} = this.state;
-        const click = new MouseEvent("click");
-
-        document.querySelector("#item-0").addEventListener("click", () => {
-            document.location.href = defaultTab;
-        })
-
-        document.querySelector("#item-0").dispatchEvent(click)
+        setDefaultTab(this.state.defaultTab)
     }
 
 
@@ -65,9 +66,15 @@ class App extends Component {
         }
     }
 
+    onFontValueChange = (e) => {
+        this.setState({
+            fontValue: e.target.value
+        })
+    }
+
     render(){
 
-        const {content, Name, LastName, Title, Phone, BannerItem_0, BannerItem_1} = this.state
+        const {content, Name, LastName, Title, Phone, BannerItem_0, BannerItem_1, fontValue} = this.state
        
         return (
 
@@ -76,12 +83,15 @@ class App extends Component {
                 <div className="perks">
                     <Perks img={logo} title={"Signature Generator"} />
                 </div>
+
+                <Settings onFontChange={(e) => {this.onFontValueChange(e)}} fontvalue={fontValue} />
+
                 <div className="container">
 
                     <div onLoad={this.tab} className="row col-wrapper">
 
                         <Controls content={content} showChilds={(e) => {this.showChilds(e)}}  />
-                        <Widget defaultStyle={".gs li {margin-left: 0px !important}"}  data={[Name, LastName, Title, Phone, BannerItem_0, BannerItem_1]}  forteLogoSvg={"https://fortegrp.com/wp-content/uploads/2023/01/fav.png"} />
+                        <Widget  data={[Name, LastName, Title, Phone, BannerItem_0, BannerItem_1, fontValue]}  forteLogoSvg={"https://fortegrp.com/wp-content/uploads/2023/01/fav.png"} />
 
 
                    
