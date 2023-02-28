@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/forte-signature/static/css/main.6789a17e.css",
+    "main.css": "/forte-signature/static/css/main.90b475ea.css",
     "main.js": "/forte-signature/static/js/main.06908c84.js",
     "index.html": "/forte-signature/index.html",
-    "main.6789a17e.css.map": "/forte-signature/static/css/main.6789a17e.css.map",
+    "main.90b475ea.css.map": "/forte-signature/static/css/main.90b475ea.css.map",
     "main.06908c84.js.map": "/forte-signature/static/js/main.06908c84.js.map"
   },
   "entrypoints": [
-    "static/css/main.6789a17e.css",
+    "static/css/main.90b475ea.css",
     "static/js/main.06908c84.js"
   ]
 }
