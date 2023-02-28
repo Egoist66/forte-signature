@@ -9,7 +9,7 @@ import WidgetPanel from "./WidgetPanel";
 //banner - "https://fortegrp.com/wp-content/uploads/2023/01/sig_banner1.png";
 
 
-function Widget({forteLogoSvg, data, defaultStyle}){
+function Widget({forteLogoSvg, data}){
  
     return (
         
@@ -18,7 +18,7 @@ function Widget({forteLogoSvg, data, defaultStyle}){
 
             <div className="generator-right">
                 
-                <WidgetTable forteLogoSvg={forteLogoSvg} defaultStyle={defaultStyle} data={data} />
+                <WidgetTable forteLogoSvg={forteLogoSvg} data={data} />
 
             </div>
 
